@@ -1,10 +1,10 @@
 import { useState } from 'react';
 import './App.css';
-import About from './components/About';
+// import About from './components/About';
 import Navbar from './components/Navbar';
 import TextForm from './components/TextForm';
 import Alert from './components/Alert';
-import { Routes, Route } from 'react-router-dom';
+// import { Routes, Route } from 'react-router-dom';
 
 function App() {
   const toggleMode = () => {
@@ -58,9 +58,14 @@ function App() {
       />
       <Alert alert={alert} />
       <div className='container'>
-        <Routes>
-          <Route path='/about' element={<About />} />
-          <Route
+        {/* <Routes> */}
+        {/* <Route path='/about' element={<About />} /> */}
+        <TextForm
+          alert={showAlert}
+          heading='Enter a text below to analyze'
+          mode={mode}
+        />
+        {/* <Route
             path='/'
             element={
               <TextForm
@@ -68,9 +73,9 @@ function App() {
                 heading='Enter a text below to analyze'
                 mode={mode}
               />
-            }
-          />
-        </Routes>
+            } */}
+        {/* /> */}
+        {/* </Routes> */}
       </div>
     </>
   );
